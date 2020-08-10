@@ -3,9 +3,13 @@ import { render } from 'react-dom';
 
 import App from './app/app';
 
+import { BrowserRouter } from 'react-router-dom';
+
 render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.querySelector('#root')
 );

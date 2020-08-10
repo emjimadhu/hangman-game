@@ -2,9 +2,9 @@ import React from 'react';
 
 import './client-figure.scss';
 
-export interface ClientFigureProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface IClientFigureProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
 
-export const ClientFigure: React.FC = (properties: ClientFigureProps) => {
+export const ClientFigure: React.FC = (properties: IClientFigureProps) => {
   return (
     <svg height="250" width="200" className="figure-container">
       {/* <!-- Rod --> */}
