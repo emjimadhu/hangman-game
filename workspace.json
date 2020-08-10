@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "projects": {
+    "hangman-game": {
+      "root": "apps/hangman-game",
+      "sourceRoot": "apps/hangman-game/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/hangman-game",
+            "index": "apps/hangman-game/src/index.html",
+            "main": "apps/hangman-game/src/main.tsx",
+            "polyfills": "apps/hangman-game/src/polyfills.ts",
+            "tsConfig": "apps/hangman-game/tsconfig.app.json",
+            "assets": [
+              "apps/hangman-game/src/favicon.ico",
+              "apps/hangman-game/src/assets"
+            ],
+            "styles": [
+              "apps/hangman-game/src/styles.scss"
+            ],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/hangman-game/src/environments/environment.ts",
+                  "with": "apps/hangman-game/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "hangman-game:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "hangman-game:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/hangman-game/tsconfig.app.json",
+              "apps/hangman-game/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/hangman-game/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/hangman-game/jest.config.js",
+            "tsConfig": "apps/hangman-game/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "hangman-game-e2e": {
+      "root": "apps/hangman-game-e2e",
+      "sourceRoot": "apps/hangman-game-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/hangman-game-e2e/cypress.json",
+            "tsConfig": "apps/hangman-game-e2e/tsconfig.e2e.json",
+            "devServerTarget": "hangman-game:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "hangman-game:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/hangman-game-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/hangman-game-e2e/**/*"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "schematics": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "hangman-game"
+}
