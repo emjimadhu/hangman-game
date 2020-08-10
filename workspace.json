@@ -30,7 +30,7 @@
               "fileReplacements": [
                 {
                   "replace": "apps/hangman-game/src/environments/environment.ts",
-                  "with": "apps/hangman-game/src/environments/environment.prod.ts"
+                  "with": "apps/hangman-game/src/environments/environment.production.ts"
                 }
               ],
               "optimization": true,
