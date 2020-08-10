@@ -28,6 +28,8 @@
     "test:client-header": "nx test client-header",
     "lint:client-figure": "nx lint client-figure",
     "test:client-figure": "nx test client-figure",
+    "lint:client-wrong-letters": "nx lint client-wrong-letters",
+    "test:client-wrong-letters": "nx test client-wrong-letters",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",

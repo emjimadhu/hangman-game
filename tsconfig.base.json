@@ -26,6 +26,9 @@
       ],
       "@hangman-game/client/figure": [
         "libs/client/figure/src/index.ts"
+      ],
+      "@hangman-game/client/wrong-letters": [
+        "libs/client/wrong-letters/src/index.ts"
       ]
     }
   },

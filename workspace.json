@@ -171,7 +171,9 @@
             "exclude": [
               "**/node_modules/**",
               "!libs/client/figure/**/*"
-            ]
+            ],
+            "fix": true,
+            "format": "formattify"
           }
         },
         "test": {
@@ -179,6 +181,38 @@
           "options": {
             "jestConfig": "libs/client/figure/jest.config.js",
             "tsConfig": "libs/client/figure/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client-wrong-letters": {
+      "root": "libs/client/wrong-letters",
+      "sourceRoot": "libs/client/wrong-letters/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/client/wrong-letters/tsconfig.lib.json",
+              "libs/client/wrong-letters/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/client/wrong-letters/**/*"
+            ],
+            "fix": true,
+            "format": "formattify"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/client/wrong-letters/jest.config.js",
+            "tsConfig": "libs/client/wrong-letters/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }

@@ -45,6 +45,11 @@
       "tags": [
         "hangman-game"
       ]
+    },
+    "client-wrong-letters": {
+      "tags": [
+        "hangman-game"
+      ]
     }
   }
 }
