@@ -35,6 +35,11 @@
       "implicitDependencies": [
         "hangman-game"
       ]
+    },
+    "client-header": {
+      "tags": [
+        "hangman-game"
+      ]
     }
   }
 }
