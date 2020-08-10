@@ -60,6 +60,11 @@
       "tags": [
         "hangman-game"
       ]
+    },
+    "client-notification": {
+      "tags": [
+        "hangman-game"
+      ]
     }
   }
 }
