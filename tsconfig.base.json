@@ -29,6 +29,9 @@
       ],
       "@hangman-game/client/wrong-letters": [
         "libs/client/wrong-letters/src/index.ts"
+      ],
+      "@hangman-game/client/word": [
+        "libs/client/word/src/index.ts"
       ]
     }
   },

@@ -217,6 +217,38 @@
           }
         }
       }
+    },
+    "client-word": {
+      "root": "libs/client/word",
+      "sourceRoot": "libs/client/word/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/client/word/tsconfig.lib.json",
+              "libs/client/word/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/client/word/**/*"
+            ],
+            "fix": true,
+            "format": "formattify"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/client/word/jest.config.js",
+            "tsConfig": "libs/client/word/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
