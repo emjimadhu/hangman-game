@@ -1,3 +1,4 @@
+/* eslint-disable jest/prefer-expect-assertions, jest/expect-expect */
 import { getGreeting } from '../support/app.po';
 
 describe('hangman-game', () => {
