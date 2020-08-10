@@ -50,6 +50,11 @@
       "tags": [
         "hangman-game"
       ]
+    },
+    "client-word": {
+      "tags": [
+        "hangman-game"
+      ]
     }
   }
 }
