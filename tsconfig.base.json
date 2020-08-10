@@ -23,6 +23,9 @@
     "paths": {
       "@hangman-game/client/header": [
         "libs/client/header/src/index.ts"
+      ],
+      "@hangman-game/client/figure": [
+        "libs/client/figure/src/index.ts"
       ]
     }
   },
