@@ -4,10 +4,11 @@ import './client-header.scss';
 
 export interface IClientHeaderProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
 
-export const ClientHeader = (properties: IClientHeaderProps) => {
+export const ClientHeader: React.FC = (properties: IClientHeaderProps) => {
   return (
     <div>
-      <h1>Welcome to client-header!</h1>
+      <h1>Hangman</h1>
+      <p>Find the hidden word - Enter a letter</p>
     </div>
   );
 };
