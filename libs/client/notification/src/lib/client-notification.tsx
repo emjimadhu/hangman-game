@@ -2,11 +2,15 @@ import React from 'react';
 
 import './client-notification.scss';
 
-export interface IClientNotificationProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface IClientNotificationProps {
+  showNotification: boolean;
+}
 
-export const ClientNotification: React.FC = (properties: IClientNotificationProps) => {
+export const ClientNotification: React.FC<IClientNotificationProps> = ({
+  showNotification
+}) => {
   return (
-    <div className="notification-container" id="notification-container">
+    <div className={`notification-container ${showNotification ? 'show' : ''}`}>
       <p>You have already entered this letter</p>
     </div>
   );

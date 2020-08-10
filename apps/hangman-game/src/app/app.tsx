@@ -5,6 +5,9 @@ import { ClientHeader } from '@hangman-game/client/header';
 import { ClientFigure } from '@hangman-game/client/figure';
 import { ClientWrongLetters } from '@hangman-game/client/wrong-letters';
 import { ClientWord } from '@hangman-game/client/word';
+import {
+  ClientNotification, showNotification as show
+} from '@hangman-game/client/notification';
 
 import './app.scss';
 
@@ -33,6 +36,11 @@ export const App = () => {
     setWrongLetters
   ] = useState<string[]>([]);
 
+  const [
+    showNotification,
+    setShowNotification
+  ] = useState<boolean>(false);
+
   useEffect(() => {
     const handleKeyDown = (event_: KeyboardEvent) => {
       const {
@@ -43,21 +51,21 @@ export const App = () => {
 
         if (selectedWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
-            setCorrectLetters(correctLetters => [
-              ...correctLetters,
+            setCorrectLetters(correctLetterValues => [
+              ...correctLetterValues,
               letter
             ]);
           } else {
-            // showNotification();
+            show(setShowNotification);
           }
         } else {
           if (!wrongLetters.includes(letter)) {
-            setWrongLetters(wrongLetters => [
-              ...wrongLetters,
+            setWrongLetters(wrongLetterValues => [
+              ...wrongLetterValues,
               letter
             ]);
           } else {
-            // showNotification();
+            show(setShowNotification);
           }
         }
       }
@@ -79,6 +87,7 @@ export const App = () => {
         <ClientWrongLetters wrongLetters={wrongLetters} />
         <ClientWord selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
+      <ClientNotification showNotification={showNotification} />
     </div>
   );
 };
