@@ -2,9 +2,14 @@ import React from 'react';
 
 import './client-figure.scss';
 
-export interface IClientFigureProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface IClientFigureProps {
+  wrongLetters: string[];
+}
 
-export const ClientFigure: React.FC = (properties: IClientFigureProps) => {
+export const ClientFigure: React.FC<IClientFigureProps> = ({
+  wrongLetters
+}) => {
+  const wrongLettersLength = wrongLetters.length;
   return (
     <svg height="250" width="200" className="figure-container">
       {/* <!-- Rod --> */}
@@ -14,15 +19,15 @@ export const ClientFigure: React.FC = (properties: IClientFigureProps) => {
       <line x1="20" y1="230" x2="100" y2="230" />
 
       {/* <!-- Head --> */}
-      <circle cx="140" cy="70" r="20" />
+      {wrongLettersLength > 0 && <circle cx="140" cy="70" r="20" />}
       {/* <!-- Body --> */}
-      <line x1="140" y1="90" x2="140" y2="150" />
+      {wrongLettersLength > 1 && <line x1="140" y1="90" x2="140" y2="150" />}
       {/* <!-- Arms --> */}
-      <line x1="140" y1="120" x2="120" y2="100" />
-      <line x1="140" y1="120" x2="160" y2="100" />
+      {wrongLettersLength > 2 && <line x1="140" y1="120" x2="120" y2="100" />}
+      {wrongLettersLength > 3 && <line x1="140" y1="120" x2="160" y2="100" />}
       {/* <!-- Legs --> */}
-      <line x1="140" y1="150" x2="120" y2="180" />
-      <line x1="140" y1="150" x2="160" y2="180" />
+      {wrongLettersLength > 4 && <line x1="140" y1="150" x2="120" y2="180" />}
+      {wrongLettersLength > 5 && <line x1="140" y1="150" x2="160" y2="180" />}
     </svg>
   );
 };

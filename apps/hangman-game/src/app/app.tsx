@@ -75,7 +75,7 @@ export const App = () => {
     <div>
       <ClientHeader />
       <div className="game-container">
-        <ClientFigure />
+        <ClientFigure wrongLetters={wrongLetters} />
         <ClientWrongLetters wrongLetters={wrongLetters} />
         <ClientWord selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
