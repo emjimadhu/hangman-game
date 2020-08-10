@@ -32,6 +32,9 @@
       ],
       "@hangman-game/client/word": [
         "libs/client/word/src/index.ts"
+      ],
+      "@hangman-game/client/popup": [
+        "libs/client/popup/src/index.ts"
       ]
     }
   },

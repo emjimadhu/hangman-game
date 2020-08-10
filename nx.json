@@ -55,6 +55,11 @@
       "tags": [
         "hangman-game"
       ]
+    },
+    "client-popup": {
+      "tags": [
+        "hangman-game"
+      ]
     }
   }
 }

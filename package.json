@@ -32,6 +32,8 @@
     "test:client-wrong-letters": "nx test client-wrong-letters",
     "lint:client-word": "nx lint client-word",
     "test:client-word": "nx test client-word",
+    "lint:client-popup": "nx lint client-popup",
+    "test:client-popup": "nx test client-popup",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
