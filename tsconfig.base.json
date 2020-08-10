@@ -35,6 +35,9 @@
       ],
       "@hangman-game/client/popup": [
         "libs/client/popup/src/index.ts"
+      ],
+      "@hangman-game/client/notification": [
+        "libs/client/notification/src/index.ts"
       ]
     }
   },
