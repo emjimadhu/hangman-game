@@ -26,6 +26,8 @@
     "lint:client-e2e": "nx lint hangman-game-e2e",
     "lint:client-header": "nx lint client-header",
     "test:client-header": "nx test client-header",
+    "lint:client-figure": "nx lint client-figure",
+    "test:client-figure": "nx test client-figure",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
