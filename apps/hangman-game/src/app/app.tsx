@@ -8,7 +8,9 @@ export const App = () => {
   return (
     <div>
       <ClientHeader />
-      <ClientFigure />
+      <div className="game-container">
+        <ClientFigure />
+      </div>
     </div>
   );
 };
