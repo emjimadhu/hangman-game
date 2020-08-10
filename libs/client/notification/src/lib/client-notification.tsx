@@ -6,8 +6,8 @@ export interface IClientNotificationProps {} // eslint-disable-line @typescript-
 
 export const ClientNotification: React.FC = (properties: IClientNotificationProps) => {
   return (
-    <div>
-      <h1>Welcome to client-notification!</h1>
+    <div className="notification-container" id="notification-container">
+      <p>You have already entered this letter</p>
     </div>
   );
 };
