@@ -30,7 +30,7 @@
               "fileReplacements": [
                 {
                   "replace": "apps/hangman-game/src/environments/environment.ts",
-                  "with": "apps/hangman-game/src/environments/environment.prod.ts"
+                  "with": "apps/hangman-game/src/environments/environment.production.ts"
                 }
               ],
               "optimization": true,
@@ -72,7 +72,9 @@
             "exclude": [
               "**/node_modules/**",
               "!apps/hangman-game/**/*"
-            ]
+            ],
+            "fix": true,
+            "format": "formattify"
           }
         },
         "test": {
@@ -113,7 +115,9 @@
             "exclude": [
               "**/node_modules/**",
               "!apps/hangman-game-e2e/**/*"
-            ]
+            ],
+            "fix": true,
+            "format": "formattify"
           }
         }
       }
