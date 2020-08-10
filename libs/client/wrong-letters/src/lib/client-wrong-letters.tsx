@@ -6,8 +6,8 @@ export interface IClientWrongLettersProps {} // eslint-disable-line @typescript-
 
 export const ClientWrongLetters: React.FC = (properties: IClientWrongLettersProps) => {
   return (
-    <div>
-      <h1>Welcome to client-wrong-letters!</h1>
+    <div className="wrong-letters-container">
+      <div id="wrong-letters"></div>
     </div>
   );
 };
