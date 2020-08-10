@@ -2,11 +2,28 @@ import React from 'react';
 
 import './client-word.scss';
 
-export interface IClientWordProps {} // eslint-disable-line @typescript-eslint/no-empty-interface
+export interface IClientWordProps {
+  selectedWord: string;
+  correctLetters: string[];
+}
 
-export const ClientWord: React.FC = (properties: IClientWordProps) => {
+export const ClientWord: React.FC<IClientWordProps> = ({
+  selectedWord, correctLetters
+}) => {
   return (
-    <div className="word" id="word"></div>
+    <div className="word">
+      {
+        selectedWord
+          .split('')
+          .map((letter: string, index: number) => {
+            return (
+              <span className="letter" key={index}>
+                {correctLetters.includes(letter) ? letter : ''}
+              </span>
+            );
+          })
+      }
+    </div>
   );
 };
 
