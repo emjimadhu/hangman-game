@@ -8,6 +8,7 @@ import { ClientWord } from '@hangman-game/client/word';
 import {
   ClientNotification, showNotification as show
 } from '@hangman-game/client/notification';
+import { ClientPopup } from '@hangman-game/client/popup';
 
 import './app.scss';
 
@@ -17,7 +18,7 @@ const words = [
   'interface',
   'wizard'
 ];
-const selectedWord = words[Math.floor(Math.random() * words.length)];
+let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 
 export const App = () => {
@@ -79,6 +80,15 @@ export const App = () => {
     wrongLetters
   ]);
 
+  const playAgain = () => {
+    setPlayable(true);
+
+    setCorrectLetters([]);
+    setWrongLetters([]);
+
+    selectedWord = words[Math.floor(Math.random() * words.length)];
+  };
+
   return (
     <div>
       <ClientHeader />
@@ -88,6 +98,13 @@ export const App = () => {
         <ClientWord selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
       <ClientNotification showNotification={showNotification} />
+      <ClientPopup
+        correctLetters={correctLetters}
+        wrongLetters={wrongLetters}
+        selectedWord={selectedWord}
+        setPlayable={setPlayable}
+        playAgain={playAgain}
+      />
     </div>
   );
 };
