@@ -1,90 +1,169 @@
-# HangmanGame
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">HANGMAN GAME</h3>
 
-This project was generated using [Nx](https://nx.dev).
+  <p align="center">
+    A Hangman Game built using React.js, Typescript and NX Workspace.
+    <br />
+    <br />
+    <a href="https://hangman-game-eta.vercel.app/">View Demo</a>
+  </p>
+</p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Adding capabilities to your workspace
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+* [About the Project](#about-the-project)
+* [Why](#why)
+* [What i wanted to learn from this Project](#what-i-wanted-to-learn-from-this-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Required Versions](#required-versions)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Main Scripts](#main-scripts)
+* [Directory Structure](#directory-structure)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-Below are our core plugins:
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-## Generate an application
+<!-- USAGE EXAMPLES -->
+## Why
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+I am learning ReactJS, so wanted to understand fundamentals of React. And wanted to learn how to creaate fully typed React Project usig Typescript. And wanted to learn NX Workspace for monorepo projects in depth. I found this [tutorial](https://www.youtube.com/watch?v=jj0W8tYX_q8&t=1s) interesting. In that tutorial they created it with React with JavaScript. And i wanted to reproduce the same project in Typescript.
 
-> You can use any of the plugins above to generate applications as well.
+## What i wanted to learn from this Project
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+- [x] `useEffect` react hook when and how to use it,
+- [X] `useState` react hook when and how to use it,
+- [X] Fully typed react functional components,
+- [X] How to use monorepo architecture like google using `nx` workspace,
+- [X] How to seperate each feature into a seperate library and use it in the app.
+- [X] How to use custom `eslint` rules for better linting and proper code structure,
+- [X] How to auto deploy static site to [vercel.com](https://vercel.com)
 
-## Generate a library
+### Built With
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+* [ReactJS](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [NX Workspace](https://nx.dev/react)
 
-> You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@hangman-game/mylib`.
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Development server
+To get a local copy up and running follow these simple steps.
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+### Required Versions
 
-## Code scaffolding
+- **node** - v12.16.1
+- **npm** - v6.14.5
+- **yarn** - v1.22.4
+- **nx** - v10.0.11
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+### Prerequisites
 
-## Build
+* node
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+# Mac and Linux using nvm (node-version-manager)
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
-## Running unit tests
+nvm install v12.16.1
+```
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+* yarn
 
-Run `nx affected:test` to execute the unit tests affected by a change.
+```sh
+# Mac
+brew install yarn
 
-## Running end-to-end tests
+# Debian / Ubuntu
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+```
 
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+* nx
 
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+```sh
+# NPM
+npm install -g nx
 
-## Understand your workspace
+# Yarn
+yarn global add nx
+```
 
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+### Installation
 
-## Further help
+1. Clone the repo
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+```sh
+# SSH
+git clone git@github.com:emjimadhu/hangman-game.git
 
-## ☁ Nx Cloud
+# HTTPS
+git clone https://github.com/emjimadhu/hangman-game.git
+```
 
-### Computation Memoization in the Cloud
+2. Install NPM packages
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+```sh
+yarn # or yarn install
+```
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+## Main Scripts
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+* `yarn start:client` - Starts Development server for react app,
+* `yarn build:client` - Builds react app for production,
+* `yarn lint:client` - Lints React App
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+## Directory Structure
+
+- `root`: Project root holds all the flies of the project
+  - `apps`: Holds client(ReactJS)
+    - `client`: Directory contains all the React app codes
+  - `libs`: Holds all the common library and codes you can share between apps
+    - `client`: Holds all the components used in react app
+      - `figure`: Figure component
+      - `header`: Header component
+      - `notification`: Notification component
+      - `popup`: Popup component
+      - `word`: Word component
+      - `wrong-letters`: WrongLetters component
+  - `readme-images`: Holds all the images for README.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Em Ji Madhu - [![LinkedIn][linkedin-shield]][linkedin-url]
+
+Project Link: [https://github.com/emjimadhu/hangman-game](https://github.com/emjimadhu/hangman-game)
+
+Demo Link: [https://hangman-game-eta.vercel.app/](https://hangman-game-eta.vercel.app/)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
+* [CodeSTACKr](https://www.youtube.com/codeSTACKr)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[product-screenshot]: repo-assets/screenshot.png
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=1
+[linkedin-url]: https://www.linkedin.com/in/em-ji-madhu-8b007456/
